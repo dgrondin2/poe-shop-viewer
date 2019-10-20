@@ -1,15 +1,24 @@
 <div class="character-sidebar">
-    <div class="character-form">
-        <div class="account-name-field">
-            <label>Account Name</label>
-            <input type="text" placeholder="Account Name"/>
+    <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
+        <div class="league-field">
+            <label for="selectedLeague">League</label>
+            <select [(ngModel)]="selectedLeague" class="league-select" name="selectedLeague">
+                <option value=" ">--Please choose an option--</option>
+                <option *ngFor="let league of leagues" value="league.value">{{league.label}}</option>
+            </select>
         </div>
-        <div class="character-name-field">
-            <label>Character Name</label>
-            <input class="character-name-field" type="text" placeholder="Character Name"/>
+        <div class="character-fields">
+            <!--div class="account-name-field">
+                <label for="accountName">Account Name</label>
+                <input type="text" placeholder="Account Name" name="accountName"/>
+            </div-->
+            <div class="character-name-field">
+                <label for="characterName">Character Name</label>
+                <input [(ngModel)]="newCharacter.name" class="character-name-field" type="text" placeholder="Character Name" name="characterName"/>
+            </div>
+            <button class="character-submit-btn" type="submit">Add Character</button>
         </div>
-        <button class="character-submit-btn" type="submit">Add Character</button>
-    </div>
+    </form>
 
     <div class="character-list">
         <!-- stub -->

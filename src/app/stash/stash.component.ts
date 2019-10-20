@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PublicStashService } from '../public-stash.service';
 
 @Component({
   selector: 'app-stash',

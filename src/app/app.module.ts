@@ -9,6 +9,8 @@ import { StashTabsComponent } from './stash-tabs/stash-tabs.component';
 import { StashTabContentComponent } from './stash-tab-content/stash-tab-content.component';
 import { CharactersComponent } from './characters/characters.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { CharactersComponent } from './characters/characters.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
